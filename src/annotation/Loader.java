@@ -6,9 +6,7 @@ public class Loader {
     public Loader() {
         try {
             ActionListenerInstaller.install(this);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         action.doAction();
