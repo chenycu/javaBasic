@@ -2,7 +2,8 @@ package annotation;
 
 public class Loader {
     @ActionListener(listener = MyNoticeEndListener1.class)
-    Action action = new Action();
+    Action action;
+
     public Loader() {
         try {
             ActionListenerInstaller.install(this);

@@ -11,16 +11,18 @@ public class ActionListenerInstaller {
         for (Field field : declaredFields) {
             if (field.isAnnotationPresent(ActionListener.class)) {
                 field.setAccessible(true);
-                Action action = (Action) field.get(targetObject);
-                Class<? extends NoticeTimeEndListener> listener = field.getAnnotation(ActionListener.class).listener();
-                Constructor<?>[] declaredConstructors1 = String.class.getDeclaredConstructors();
-                System.out.println(declaredConstructors1[0]);
-                Constructor<?>[] declaredConstructors = listener.getDeclaredConstructors();
-                for (Constructor constructor : declaredConstructors) {
-                    System.out.println("开始了");
-                    System.out.println(constructor);
+                Action action;
+                if (field.get(targetObject) == null){
+                    action = new Action();
+                    field.set(targetObject, action);
+                } else {
+                    action = (Action) field.get(targetObject);
                 }
-//                action.setListener(listener.newInstance());
+                Class<? extends NoticeTimeEndListener> listener = field.getAnnotation(ActionListener.class).listener();
+//                Constructor<?>[] declaredConstructors = listener.getDeclaredConstructors();
+//                for (Constructor constructor : declaredConstructors) {
+//                    System.out.println(constructor);
+//                }
                 action.setListener(listener.getConstructor(targetObject.getClass()).newInstance(targetObject));
             }
         }
