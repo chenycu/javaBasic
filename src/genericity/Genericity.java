@@ -37,6 +37,7 @@ public class Genericity {
     public static void main(String[] args) {
         Plate<A> a = new Plate<>(new B());
         a.setItem(new A());
+        a.setItem(new B());
 
         List<StringBuffer> s = new ArrayList<>();
         s.add(new StringBuffer("1"));
