@@ -80,5 +80,7 @@ public class test_1 {
         System.out.println("commit_1");
         System.out.println("commit_2");
         System.out.println("commit_3");
+        System.out.println("commit_4");
+        System.out.println("commit_5");
     }
 }
