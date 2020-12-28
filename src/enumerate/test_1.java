@@ -82,5 +82,6 @@ public class test_1 {
         System.out.println("commit_3");
         System.out.println("commit_devcopy");
         System.out.println("commit_devcopy——1");
+        System.out.println("commit_devcopy——2");
     }
 }
