@@ -78,5 +78,6 @@ public class test_1 {
 
         System.out.println("我是最新修改的");
         System.out.println("commit_1");
+        System.out.println("commit_2");
     }
 }
