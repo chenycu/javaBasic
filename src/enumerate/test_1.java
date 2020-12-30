@@ -77,14 +77,5 @@ public class test_1 {
         System.out.println(Day.fromString(33).getName());
 
         System.out.println("我是最新修改的");
-        System.out.println("commit_1");
-        System.out.println("commit_2");
-        System.out.println("commit_3");
-        System.out.println("commit_4");
-        System.out.println("commit_5");
-        System.out.println("commit_dev_1");
-
-        System.out.println(1);
-        System.out.println(2);
     }
 }
