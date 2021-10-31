@@ -3,6 +3,7 @@ package map;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class TestConcurrentHashMap {
